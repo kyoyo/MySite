@@ -1,0 +1,25 @@
+{% extends 'app01/base.html' %}
+{% load app01_tags %}
+
+{% load bootstrap3 %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block page_title %} <h1>Index</h1>{% endblock %}
+{% block content %}
+    <table class="table">
+        {% for article in article_list %}
+            <tr>
+                <td>{{ article.title }}</td>
+                <td>{{ article.create_time }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <hr>
+
+    {% bootstrap_pagination article_list url="/?page=1&flop=flip" extra="q=foo" size="small" %}
+
+{% endblock %}

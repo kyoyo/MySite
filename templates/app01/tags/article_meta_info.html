@@ -1,0 +1,15 @@
+{% load app01_tags %}
+本条目发布于{% datetimeformat article.create_time %} 。属于<a href="{{ article.category.get_absolute_url }}">{{article.category.name}}</a>分类，
+
+{% if article.tags.all %}
+被贴了
+{% for t in article.tags.all %}
+<a href="{{t.get_absolute_url}}">{{t.name}}</a>
+  {% if t != article.tags.all.last %}
+      ,
+  {% endif %}
+{% endfor %}
+标签。
+{% endif %}
+
+作者是{{article.author.username}}。

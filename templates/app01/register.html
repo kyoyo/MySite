@@ -1,0 +1,32 @@
+{% extends 'app01/base.html' %}
+
+{% load bootstrap3 %}
+
+{% block title %}
+Register
+{% endblock %}
+{% block page_title %} <h1>Register</h1>{% endblock %}
+{% block content %}
+<br><br><br><br><br>
+<div class="row">
+    <div class="col-xs-6 col-md-3"></div>
+    <div class="col-xs-6 col-md-6">
+        {# Display a form #}
+        <form role="form" action="{% url 'app01:register' %}" method="post" class="form-horizontal">
+            {% csrf_token %}
+            {% bootstrap_form form layout="horizontal" %}
+
+            {% buttons layout="horizontal" %}
+            <button type="submit" class="btn btn-primary">
+                Register
+            </button>
+
+            {% endbuttons %}
+        </form>
+
+
+    </div>
+    <div class="col-xs-6 col-md-3"></div>
+</div>
+
+{% endblock %}
