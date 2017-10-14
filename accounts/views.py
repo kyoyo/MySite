@@ -37,28 +37,6 @@ class LoginView(FormView):
     success_url = '/'
     redirect_field_name = REDIRECT_FIELD_NAME
 
-###
-#as_view
-#dispatch
-#get
-#get_form
-#get_form_class
-#get_form_kwargs
-#get_initial
-#get_prefix
-#get_template_names
-#http_method_not_allowed
-#options
-#post
-#put
-#render_to_response
-#
-#
-#
-#
-#
-###
-
 
 #-------------method test start-------------------#
     def get(self, request, *args, **kwargs):

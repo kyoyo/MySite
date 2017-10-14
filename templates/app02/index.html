@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load bootstrap3 %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block page_title %} <h1>Index</h1>{% endblock %}
+{% block content %}
+{% if is_save %}
+    To be saved successfully.
+{% endif %}
+
+<form role="form" action="{% url 'app02:author' %}" method="post" class="form-horizontal">
+    {% csrf_token %}
+    {% bootstrap_form form layout="horizontal" %}
+
+    {% buttons layout="horizontal" %}
+        <button type="submit" class="btn btn-primary">
+            Create
+        </button>
+
+    {% endbuttons %}
+</form>
+
+
+{% endblock %}

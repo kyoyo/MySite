@@ -29,7 +29,7 @@ class RegisterForm(forms.Form):
                                )
 
     password = forms.CharField(widget=forms.PasswordInput)
-    birth = forms.DateField()
+    birth = forms.DateField(widget = forms.DateInput(attrs={'placeholder':'YYYY-MM-DD'}))
     datetime = forms.SplitDateTimeField(widget=AdminSplitDateTime(), required=False)
     select1 = forms.ChoiceField(choices=RADIO_CHOICES)
     select2 = forms.MultipleChoiceField(

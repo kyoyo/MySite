@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap3',
     'app01',
+    'app02',
     'accounts',
 ]
 
@@ -136,9 +137,15 @@ AUTH_USER_MODEL='accounts.BlogUser'
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'zh-hans'
+#LANGUAGE_CODE = 'zh-hans'
+#TIME_ZONE = 'Asia/Shanghai'
 
-TIME_ZONE = 'Asia/Shanghai'
+
+#http://www.i18nguy.com/unicode/language-identifiers.html
+LANGUAGE_CODE = 'ja'
+
+#https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 
